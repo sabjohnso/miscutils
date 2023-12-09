@@ -12,3 +12,8 @@ macro(miscutils_add_test test_name)
     CXX_STANDARD ${miscutils_CXX_STANDARD})
   add_test(${test_name} ${exe_name})
 endmacro()
+
+add_test(NAME fail_test COMMAND fail)
+set_tests_properties(fail_test PROPERTIES WILL_FAIL ON)
+
+add_test(NAME succeed_test COMMAND succeed)

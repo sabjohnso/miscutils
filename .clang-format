@@ -1,7 +1,7 @@
 ---
 Language:        Cpp
 # BasedOnStyle:  Mozilla
-AccessModifierOffset: 0
+AccessModifierOffset: -3
 AlignAfterOpenBracket: AlwaysBreak
 AlignArrayOfStructures: Left
 AlignConsecutiveMacros: None
@@ -57,7 +57,7 @@ BreakConstructorInitializersBeforeComma: true
 BreakConstructorInitializers: BeforeComma
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: true
-ColumnLimit:     72
+ColumnLimit:     100
 CommentPragmas:  '^ IWYU pragma:'
 QualifierAlignment: Left
 CompactNamespaces: false
