@@ -20,9 +20,17 @@ add_executable(throttle throttle.cpp)
 target_link_libraries(throttle
   PUBLIC -static
   PRIVATE
+  miscutils::header
   nlohmann_json::nlohmann_json Boost::program_options)
 
-install(TARGETS fail succeed throttle
+add_executable(replace-byte replace_byte.cpp)
+target_link_libraries(replace-byte
+  PUBLIC -static
+  PRIVATE
+  miscutils::header
+  nlohmann_json::nlohmann_json Boost::program_options)
+
+install(TARGETS fail succeed throttle replace-byte
   EXPORT miscutils_EXPORTS
   RUNTIME DESTINATION ${miscutils_INSTALL_BINDIR}
   LIBRARY DESTINATION ${miscutils_INSTALL_LIBDIR}
